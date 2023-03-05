@@ -21,11 +21,12 @@ def main():
     input_type = input("")
     if "I" in input_type:
         n = input("")
-        n = int(n.join(i for i in n if i.isdigit()))
+        n = int(n.replace("\\r\\n",""))
+        print(n)
         parents = list(map(int, input("").split()))
     else:
         file_path = input("")
-        while "a" in filename:
+        while "a" in file_path:
             filename = input("")
             with open(f"folder/{filename}.txt", "r") as file:
                 n = int(file.readline())
