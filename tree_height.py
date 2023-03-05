@@ -30,7 +30,7 @@ def main():
         file_path = input("")
         while "a" in file_path:
             file_path = input("")
-        with open(f"vladislav454/DA-testa/test/{file_path}.txt", "r") as file:
+        with open(f"/home/runner/work/tree-height-from-empty-vladislav454/tree-height-from-empty-vladislav454/test/{file_path}.txt", "r") as file:
             n = int(file.readline())
             parents = list(map(int, file.readline().split()))
 
