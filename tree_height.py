@@ -29,10 +29,10 @@ def main():
     else:
         file_path = input("")
         while "a" in file_path:
-            filename = input("")
-            with open(f"folder/{filename}.txt", "r") as file:
-                n = int(file.readline())
-                parents = list(map(int, file.readline().split()))
+            file_path = input("")
+        with open(f"tree-height-from-empty-vladislav454/test/{file_path}.txt", "r") as file:
+            n = int(file.readline())
+            parents = list(map(int, file.readline().split()))
 
     nodes = [Node(i) for i in range(n)]
     root = None
@@ -42,8 +42,11 @@ def main():
         else:
             nodes[parent].children.append(nodes[i])
 
-    height = compute_height(root)
-    print(height)
+    if root:
+        height = compute_height(root)
+        print(height)
+    else:
+        print("Error: No root node found in the input.")
 
 sys.setrecursionlimit(10**7)
 threading.stack_size(2**27)
