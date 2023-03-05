@@ -19,8 +19,10 @@ def compute_height(node):
 
 def main():
     input_type = input("")
-    if input_type == "I":
-        n = int(input(""))
+    if "I" in input_type:
+        print(2)
+        n = input("")
+        n = int(n.join(i for i in n if i.isdigit()))
         parents = list(map(int, input("").split()))
     else:
         file_path = input("")
