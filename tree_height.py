@@ -30,7 +30,7 @@ def main():
         file_path = input("")
         while "a" in file_path:
             file_path = input("")
-        with open(f"python projects/{file_path}.txt", "r") as file:
+        with open(f"./test/{file_path}", "r") as file:
             n = int(file.readline())
             parents = list(map(int, file.readline().split()))
 
