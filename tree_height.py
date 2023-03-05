@@ -20,6 +20,7 @@ def compute_height(node):
 def main():
     input_type = input("")
     n = 0
+    parents = []
     if "I" in input_type:
         n = input("")
         n = int(n.replace("\\r\\n",""))
