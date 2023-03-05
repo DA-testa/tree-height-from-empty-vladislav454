@@ -30,7 +30,7 @@ def main():
         file_path = input("")
         while "a" in file_path:
             file_path = input("")
-        with open(f"./test/{file_path}", "r") as file:
+        with open(f"python projects/{file_path}.txt", "r") as file:
             n = int(file.readline())
             parents = list(map(int, file.readline().split()))
 
@@ -42,11 +42,8 @@ def main():
         else:
             nodes[parent].children.append(nodes[i])
 
-    if root:
-        height = compute_height(root)
-        print(height)
-    else:
-        print("Error: No root node found in the input.")
+    height = compute_height(root)
+    print(height)
 
 sys.setrecursionlimit(10**7)
 threading.stack_size(2**27)
